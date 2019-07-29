@@ -1,7 +1,7 @@
 fastRdm - fast diffusion model analysis using R
 ====================================================
 
-INTRODUCTION
+Introduction
 ------------
 
 Stochastic Diffusion Models are used in cognitive science to analyse
