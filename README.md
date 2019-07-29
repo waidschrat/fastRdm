@@ -23,14 +23,15 @@ FastRdm estimates values for this parameters from response-time
 distributions for both alternative decisions. FastRdm is based on
 a fast numerical approach for solving the Partial Differential Equation 
 defining the above sketched diffusion model (cf. Voss & Voss, 2008).
-A detailed description of fast-dm is given by Voss and Voss (2007).
+A detailed description of the core C functions that fastRdm relies
+on is given by Voss and Voss (2007).
 
 FastRdm comes with NO WARRANTY, to the extent permitted by law.  You
 may redistribute copies of fastRdm under the terms of the GNU General
 Public License.
 
 
-REFERENCES
+References
 ----------
 Ratcliff, R., 1978. A theory of memory retrieval. Psychological Review,
   85, 59-108.
@@ -55,16 +56,16 @@ Wagenmakers, E.-J., van der Maas, H. L. J., & Grasman, R. P. P. P., 2007.
   Psychonomic Bulletin & Review, 14, 3-22.
 
 
-INTERNAL C Functions (fast-dm 30.2)
+Internal C Functions (fast-dm 30.2)
 -----------------------------------
 
-The program is split into several source files.  The common header
+The core of the package is split into several source files. The common header
 file for all of these is "fast-dm.h".
 
     cdf.c         - compute the CDF for the diffusion model
     container.c   - container types (sets, dictionaries, arrays)
     dataset.c     - read and store data files
-	density.c     - calculate the density of the predicted response-time distributions
+    density.c     - calculate the density of the predicted response-time distributions
     experiment.c  - read and store the control file
     EZ-diff.c     - compute approximate parameters using the EZ-model
     file.c        - auxiliary funcitons to read control and data files
