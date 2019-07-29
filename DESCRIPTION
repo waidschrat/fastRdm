@@ -1,11 +1,21 @@
 Package: fastRdm
 Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Title: Fast Diffusion Modeling of Response Times
+Version: 0.1
+Date: 2019-07-27
+Authors: Robert Miller, Florian Rupprecht, Jochen Voss, Andreas Voss 
+Maintainer: Robert Miller <robert.miller@tu-dresden.de>
+Suggests: RWiener
+Description: Stochastic diffusion models are used in cognitive science to analyse response time data 
+    from binary decision tasks. They assume that the information supporting one and refuting the other
+    decision can be described by an unobservable Wiener process with constant drift over time. Response times
+    are generated when this process crosses one out of two boundaries.
+    FastRdm provides an R interface to the fast-dm library developed by Voss and Voss (XXXX). Accordingly, 
+    the package efficiently estimates the parameters of such diffusion models based on a fast numerical approach
+    for solving their defining partial differential equation. In addition to fast-dm, however, the package
+    takes advantage of R's formula interface, data handling, parallelization, and visualization capabilities.
+License: GPL (>= 2)
 Encoding: UTF-8
+URL: http://http://www.psychologie.uni-heidelberg.de/ae/meth/fast-dm/
 LazyData: true
+RoxygenNote: 6.1.1
