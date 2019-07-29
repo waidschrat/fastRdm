@@ -19,22 +19,15 @@ time (t0), and three so-called inter-trial variability parameters
 concerning the starting point (sz), the drift (sv), and the non-
 decisional response-time constant (st0).
 
-Fast-dm estimates values for this parameters from response-time
-distributions for both alternative decisions. Fast-dm is based on
+FastRdm estimates values for this parameters from response-time
+distributions for both alternative decisions. FastRdm is based on
 a fast numerical approach for solving the Partial Differential Equation 
 defining the above sketched diffusion model (cf. Voss & Voss, 2008).
 A detailed description of fast-dm is given by Voss and Voss (2007).
 
-Instructions about how to use the programm can be found in the
-file MANUAL.  Please mail any suggestions and bug reports to
-Jochen Voss <voss@seehuhn.de> or to
-Andreas Voss <Andreas.Voss@psychologie.uni-heidelberg.de> .
-
-
-Fast-dm comes with NO WARRANTY, to the extent permitted by law.  You
-may redistribute copies of fast-dm  under the terms of the GNU General
-Public License.  For more information about these matters, read the
-file COPYING of the source code distribution.
+FastRdm comes with NO WARRANTY, to the extent permitted by law.  You
+may redistribute copies of fastRdm under the terms of the GNU General
+Public License.
 
 
 REFERENCES
@@ -62,32 +55,8 @@ Wagenmakers, E.-J., van der Maas, H. L. J., & Grasman, R. P. P. P., 2007.
   Psychonomic Bulletin & Review, 14, 3-22.
 
 
-INSTALLATION
-------------
-
-On Unix-like systems:
-Just type the following commands
-
-    ./configure
-    make
-
-On Windows systems:
-As usual, on a Windows system things are a little more complicated.  The
-following steps may help you if you are using Microsoft's Visual Studio 7:
-
-(1) Create a new project. Choose a "win32 Console project", and make sure 
-    that the "empty project" check-box is selected.
-(2) Copy all "fast-dm" files in the new project directory.
-(3) Add the source code to the project.  You need the files EZ-diff.c,
-    cdf.c, container.c, dataset.c, experiment.c, file.c, main.c,
-    method-ks.c, pde.c, phi.c, simplex2.c, win32dir.c, win32dir.h,
-    win32erf.c, xmalloc.c and fast-dm.h .
-(4) In the project settings, select "compile as C-code" (and not C++).
-(5) Compile the project.
-
-
-INTERNALS
----------
+INTERNAL C Functions (fast-dm 30.2)
+-----------------------------------
 
 The program is split into several source files.  The common header
 file for all of these is "fast-dm.h".
@@ -118,7 +87,7 @@ file for all of these is "fast-dm.h".
 
 
 Users' manual
-=====================
+=============
 
 Fast-dm is a program to efficiently estimate parameters in Ratcliff's
 diffusion model.  Valid parameters are
